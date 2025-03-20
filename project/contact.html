@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPRC KARONGI</title>
+    <title>RP KARONGI COLLEGE</title>
 </head>
 <body>
     <table border="0" width="100%" cellspacing="0" cellpadding="0">
         <tr>
             <td>
-                <img src="images/logo.png" alt="IPRC KARONGI" width="100px" height="100px">
+                <img src="images/logo.png" alt="RP KARONGI" width="100px" height="100px">
+            </td>
+            
+            <td align="right">
+                <h1>RP KARONGI COLLEGE</h1>
             </td>
             <td align="right">
-                <h1>IPRC KARONGI</h1>
-            </td>
-            <td align="right">
-                <input type="text" placeholder="search here ..." >
-                <button>🔍</button>
+                <form action="/search" method="get">
+                    <input type="text" name="query" placeholder="search here ...">
+                    <button type="submit">🔍</button>
+                </form>
             </td>
         </tr>
     </table>
@@ -37,20 +40,21 @@
         <tr>
             <td width="60%" valign="top"><br><br>
                 <center>
-                       
-                    <p><strong>Address:</strong><br>
-                    RP Karongi College<br>
-                    Karongi District, <br> Western Province, Rwanda <br>
-                    
-                    <strong>Phone:</strong>
-                    📞 +250 788 123 456 <br>
-                    
-                    <strong>Email:</strong>
-                    ✉ info@rpkarongi.ac.rw <br>
-                    
-                    <strong>Website:</strong>
-                    🌐 <a href="http://www.rpkarongi.ac.rw" target="_blank">www.rpkarongi.ac.rw <br></a>
-                 
+                    <form action="/submit_contact" method="post">
+                        <p><strong>Name:</strong><br>
+                        <input type="text" name="name" placeholder="Your Name" required><br>
+                        
+                        <strong>Phone:</strong><br>
+                        <input type="tel" name="phone" placeholder="Your Phone Number" required><br>
+                        
+                        <strong>Email:</strong><br>
+                        <input type="email" name="email" placeholder="Your Email" required><br>
+                        
+                        <strong>Message:</strong><br>
+                        <textarea name="message" placeholder="Your Message" rows="4" required></textarea><br>
+                        
+                        <button type="submit">Submit</button>
+                    </form>
                 </center>
             </td>
             <td width="35%">
