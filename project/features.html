@@ -3,118 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FEATURES</title>
+    <title>REGISTRATION</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-            <td align="center">
-                <img src="Images/logo.png" alt="Logo" width="50">
-            </td>
-            <td align="right">
-                <h1 id="up">Tech Innovators Inc.</h1>
-            </td>
-            <td align="center">
-                <input type="text" placeholder="Type to search...">
-                <button>🔍</button>
-                <button onclick="toggleDarkMode()">Change Theme</button>
-            </td>
-        </tr>
-    </table>
-    <table width="100%" border="1" cellspacing="0" cellpadding="0">
-        <tr>
-            <td colspan="3" align="center">
-                <a href="index.html"><button>HOME</button></a>
-                <a href="registration.html"><button>REGISTRATION</button></a>
-                <a href="about-us.html"><button>ABOUT US</button></a>
-                <a href="contact-us.html"><button>CONTACT US</button></a>
-                <a href="#"><button>FEATURES</button></a>
-            </td>
-        </tr>
-        <tr>
-            <td valign="top" colspan="2" width="80%">
-                <br>
-                <div class="scrolling-table">
-                    <table border="1" align="center" cellpadding="0" cellspacing="0" width="80%">
-                        <tr>
-                            <td>
+    <header>
+        <img src="Images/logo.png" alt="Logo">
+        <h1 id="up">Tech Innovators Inc.</h1>
+        <div>
+            <input type="text" placeholder="Type to search...">
+            <button>🔍</button>
+            <button onclick="toggleDarkMode()">Change Theme</button>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="registration.html">REGISTRATION</a>
+        <a href="about-us.html">ABOUT US</a>
+        <a href="contact-us.html">CONTACT US</a>
+        <a href="features.html">FEATURES</a>
+        <div class="dropdown">
+            <a href="#">SERVICES</a>
+            <div class="dropdown-content">
+                <a href="web-development.html">Web Development</a>
+                <a href="app-development.html">App Development</a>
+                <a href="cloud-services.html">Cloud Services</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">TRAINING</a>
+            <div class="dropdown-content">
+                <a href="ai-training.html">AI Training</a>
+                <a href="web-design-training.html">Web Design Training</a>
+                <a href="data-science-training.html">Data Science Training</a>
+            </div>
+            
+        </div>
+        <a href="login.html">LOGIN</a>
+    </nav>
+        <main>
+        <section class="features">
+                    <article>
                                 <h2>Geolocation API</h2>
                                 <p>Click the button to get your current location:</p>
-                                <button onclick="getLocation()">Get Location</button>
+                                <input type="submit" onclick="getLocation()" value="Get Location">
                                 <p id="location"></p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
+                            </article>
+                        <article>
                                 <h2>Web Storage API</h2>
                                 <p>To-Do List:</p>
-                                <input type="text" id="task" placeholder="New task">
-                                <button onclick="addTask()">Add Task</button>
+                                <input type="text" id="task" placeholder="New task"><br>
+                                <input type="submit" onclick="addTask()" value="Add Task">
                                 <ul id="taskList"></ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
+                            </article>
+                        <article>
                                 <h2>Fetch API</h2>
                                 <p>Click the button to fetch data from a public API:</p>
-                                <button onclick="fetchData()">Fetch Data</button>
+                                <input type="submit" onclick="fetchData()" value="Fetch Data">
                                 <pre id="apiData"></pre>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
+                            </article>
+                        <article>
                                 <h2>Canvas API</h2>
                                 <p>Draw on the canvas below:</p>
-                                <canvas id="canvas" width="500" height="500" ></canvas>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <br><br><br><br><br><br><br><br><br>
-            </td>
-            <td valign="top">
-                <h3 align="center">ANNOUNCEMENTS</h3>
-                <pre align="center">
-                    <marquee behavior="scroll" direction="up" scrollamount="1" loop="-1" height="200" scrolldelay="-1" width="400" onmouseover="this.stop();" onmouseout="this.start();">
+                                <div class="canvas-container">
+                                    <canvas id="canvas" width="500" height="500"></canvas>
+                                </div> <br>
+                                <input type="reset" onclick="clearCanvas()">
+                            </article>
+                </section>
+                <aside class="announcements">
+            <h3>ANNOUNCEMENTS</h3>
+                    <marquee behavior="scroll" direction="up" scrollamount="1" loop="-1" height="200" scrolldelay="-1" onmouseover="this.stop();" onmouseout="this.start();">
                         <ol>
-                            <li>New training program launced!.</li>
+                            <li>New training program launched!</li>
                             <li>Register now for exclusive workshops.</li>
                             <li>Join us for the annual sports day on March 30th.</li>
                             <li>Submit your project proposals by March 20th.</li>
                         </ol>
                     </marquee>
-                </pre>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" align="center">
+                </aside>
+            </main>
                 <footer>
                     <p>© 2025 Tech Innovators Inc. Designed by Jackson Bimenyimana</p>
                     <a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a>
-                    <p>
+                    <div class="social-links">
                         <a href="#"><img src="Images/facebook.png" alt="Facebook" width="20"></a>
                         <a href="#"><img src="Images/instagram.png" alt="Instagram" width="20"></a>
                         <a href="#"><img src="Images/linkedin.png" alt="LinkedIn" width="20"></a>
-                    </p>
+                    </div>
+        <a href="#up">Back To Top</a>
                 </footer>
-                <a href="#up"> Back To Top</a>
-            </td>
-        </tr>
-    </table>
-
-    <script>
+                    <script>
         // Geolocation API
         function getLocation() {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
             } else {
                 document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
             }
         }
 
         function showPosition(position) {
-            document.getElementById("location").innerHTML = "Latitude: " + position.coords.latitude + 
-            "<br>Longitude: " + position.coords.longitude;
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            // Determine position relative to the Equator and Prime Meridian
+            const equatorPosition = latitude > 0 ? "North of the Equator" : latitude < 0 ? "South of the Equator" : "On the Equator";
+            const meridianPosition = longitude > 0 ? "East of the Prime Meridian" : longitude < 0 ? "West of the Prime Meridian" : "On the Prime Meridian";
+
+            document.getElementById("location").innerHTML = `
+                Latitude: ${latitude} (${equatorPosition})<br>
+                Longitude: ${longitude} (${meridianPosition})
+            `;
+        }
+
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById("location").innerHTML = "User denied the request for Geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById("location").innerHTML = "Location information is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById("location").innerHTML = "The request to get user location timed out.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    document.getElementById("location").innerHTML = "An unknown error occurred.";
+                    break;
+            }
         }
 
         // Web Storage API
@@ -144,42 +161,52 @@
 
         // Fetch API
         function fetchData() {
-            fetch('https://jsonplaceholder.typicode.com/posts/1')
+            fetch('https://jsonplaceholder.typicode.com/posts/1') // Example API
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById("apiData").textContent = JSON.stringify(data, null, 2);
+                    // Display specific fields from the fetched data
+                    document.getElementById("apiData").innerHTML = `
+                        <strong>Title:</strong> ${data.title}<br>
+                        <strong>Body:</strong> ${data.body}
+                    `;
+                })
+                .catch(error => {
+                    document.getElementById("apiData").innerHTML = "Error fetching data.";
+                    console.error("Error:", error);
                 });
         }
 
         // Canvas API
-        let canvas = document.getElementById("canvas");
-        let ctx = canvas.getContext("2d");
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
         let drawing = false;
 
-        canvas.addEventListener("mousedown", startDrawing);
-        canvas.addEventListener("mouseup", stopDrawing);
-        canvas.addEventListener("mousemove", draw);
-
-        function startDrawing(e) {
+        canvas.addEventListener("mousedown", (e) => {
             drawing = true;
-            draw(e);
-        }
+            ctx.beginPath();
+            ctx.moveTo(e.offsetX, e.offsetY);
+        });
 
-        function stopDrawing() {
+        canvas.addEventListener("mousemove", (e) => {
+            if (drawing) {
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.stroke();
+            }
+        });
+
+        canvas.addEventListener("mouseup", () => {
             drawing = false;
-            ctx.beginPath();
-        }
+            ctx.closePath();
+        });
 
-        function draw(e) {
-            if (!drawing) return;
-            ctx.lineWidth = 3;
-            ctx.lineCap = "round";
-            ctx.strokeStyle = "black";
+        canvas.addEventListener("mouseleave", () => {
+            drawing = false;
+            ctx.closePath();
+        });
 
-            ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+        // Optional: Clear Canvas Button
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
         }
 
         // Dark Mode Toggle
