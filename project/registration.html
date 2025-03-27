@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <header>
+        <img src="Images/logo.png" alt="Logo">
+        <h1 id="up">Tech Innovators Inc.</h1>
+        <div>
+            <input type="text" placeholder="Type to search...">
+            <button>🔍</button>
+            <button onclick="toggleDarkMode()">Change Theme</button>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="registration.html">REGISTRATION</a>
+        <a href="about-us.html">ABOUT US</a>
+        <a href="contact-us.html">CONTACT US</a>
+        <a href="features.html">FEATURES</a>
+        <div class="dropdown">
+            <a href="#">SERVICES</a>
+            <div class="dropdown-content">
+                <a href="web-development.html">Web Development</a>
+                <a href="app-development.html">App Development</a>
+                <a href="cloud-services.html">Cloud Services</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">TRAINING</a>
+            <div class="dropdown-content">
+                <a href="ai-training.html">AI Training</a>
+                <a href="web-design-training.html">Web Design Training</a>
+                <a href="data-science-training.html">Data Science Training</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="registration-form">
+            <h1>REGISTRATION FORM</h1>
+            <form>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Full Names:</label><br>
+                    <input type="text" name="name" id="name" required><br><br>
+                    <label for="dob">Date of birth:</label><br>
+                    <input type="date" name="dob" id="dob" required><br><br>
+                    <label for="gender">Gender:</label><br>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="other" value="other">
+                    <label for="other">Other</label><br><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email" id="email" required><br><br>
+                    <label for="phone">Phone:</label><br>
+                    <input type="tel" name="phone" id="phone" required><br><br>
+                    <label for="address">Address:</label><br>
+                    <textarea name="address" id="address" cols="30" rows="5" required></textarea><br><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Account Information</legend>
+                    <label for="username">Username:</label><br>
+                    <input type="text" name="username" id="username" required><br><br>
+                    <label for="password">Password:</label><br>
+                    <input type="password" name="password" id="password" required><br><br>
+                    <label for="confirm">Confirm Password:</label><br>
+                    <input type="password" name="confirm" id="confirm" required><br><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <label for="newsletter">Newsletter Subscription</label>
+                    <input type="checkbox" name="newsletter" id="newsletter"><br><br>
+                    <label for="communication">Preferred Communication Method</label>
+                    <select name="communication" id="communication">
+                        <option value="email">Email</option>
+                        <option value="phone">Phone</option>
+                        <option value="both">Both</option>
+                    </select><br><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <label for="profile">Profile Picture:</label>
+                    <input type="file" name="profile" id="profile"><br><br>
+                    <label for="bio">Bio:</label><br>
+                    <textarea name="bio" id="bio" cols="30" rows="5" required></textarea><br><br>
+                </fieldset>
+                <fieldset>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </fieldset>
+            </form>
+        </section>
+
+        <aside class="announcements">
+            <h3>ANNOUNCEMENTS</h3>
+            <marquee behavior="scroll" direction="up" scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();">
+                <ol>
+                    <li>New training program launched!</li>
+                    <li>Register now for exclusive workshops.</li>
+                    <li>Join us for the annual sports day on March 30th.</li>
+                    <li>Submit your project proposals by March 20th.</li>
+                </ol>
+            </marquee>
+        </aside>
+    </main>
+
+    <footer>
+        <p>© 2025 Tech Innovators Inc. Designed by Jackson Bimenyimana</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a>
+        <p>
+            <a href="#"><img src="Images/facebook.png" alt="Facebook" width="20"></a>
+            <a href="#"><img src="Images/instagram.png" alt="Instagram" width="20"></a>
+            <a href="#"><img src="Images/linkedin.png" alt="LinkedIn" width="20"></a>
+        </p>
+        <a href="#up">Back To Top</a>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.getElementById('body');
+            body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>

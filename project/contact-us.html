@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT US</title>
+</head>
+<body id="body">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="center">
+                <img src="Images/logo.png" alt="Logo" width="50">
+            </td>
+            <td align="right">
+                <h1 id="up">Tech Innovators Inc.</h1>
+            </td>
+            <td align="center">
+                <input type="text" placeholder="Type to search...">
+                <button>🔍</button>
+                <button onclick="toggleDarkMode()">Change Theme</button>
+            </td>
+        </tr>
+    </table>
+    <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td colspan="3" align="center">
+                <a href="index.html"><button>HOME</button></a>
+                <a href="registration.html"><button>REGISTRATION</button></a>
+                <a href="about-us.html"><button>ABOUT US</button></a>
+                <a href="#"><button>CONTACT US</button></a>
+                <a href="features.html"><button>FEATURES</button></a>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" colspan="2" width="80%">
+                <br>
+                <h1 align="center">CONTACT US</h1>
+                <table border="1" align="center" cellpadding="5" cellspacing="0" width="60%">
+                    <tr>
+                        <td>
+                            <label for="name">Names:</label><br><br>
+                            <input type="text" name="name" id="name" required><br><br>
+                            <label for="email">Email:</label><br><br>
+                            <input type="email" name="email" id="email" required><br><br>
+                            <label for="message">Message:</label><br><br>
+                            <textarea name="message" id="message" cols="30" rows="10" required></textarea><br><br>
+                            <input type="submit" value="Submit">
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <h1 align="center">FEEDBACK</h1>
+                <table border="1" align="center" cellpadding="5" cellspacing="0" width="60%">
+                    <tr>
+                        <td>
+                            <label for="feedback-name">Name:</label><br><br>
+                            <input type="text" name="feedback-name" id="feedback-name" required><br><br>
+                            <label for="feedback-email">Email:</label><br><br>
+                            <input type="email" name="feedback-email" id="feedback-email" required><br><br>
+                            <label for="rating">Rating:</label><br><br>
+                            <input type="radio" name="rating" id="rating-1" value="1">
+                            <label for="rating-1">1</label>
+                            <input type="radio" name="rating" id="rating-2" value="2">
+                            <label for="rating-2">2</label>
+                            <input type="radio" name="rating" id="rating-3" value="3">
+                            <label for="rating-3">3</label>
+                            <input type="radio" name="rating" id="rating-4" value="4">
+                            <label for="rating-4">4</label>
+                            <input type="radio" name="rating" id="rating-5" value="5">
+                            <label for="rating-5">5</label><br><br>
+                            <label for="feedback-message">Feedback:</label><br><br>
+                            <textarea name="feedback-message" id="feedback-message" cols="30" rows="10" required></textarea><br><br>
+                            <input type="submit" value="Submit Feedback">
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <table align="center">
+                    <tr>
+                        <td>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5162573913726!2d30.05661857396137!3d-1.9464378980359067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca423fc9c565b%3A0x7a79f00846c5640d!2sSALTEL!5e0!3m2!1sen!2srw!4v1742456886377!5m2!1sen!2srw" width="500" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td valign="top">
+                <h3 align="center">ANNOUNCEMENTS</h3>
+                <pre align="center">
+                    <marquee behavior="scroll" direction="up" scrollamount="1" loop="-1" height="200" scrolldelay="-1" width="400" onmouseover="this.stop();" onmouseout="this.start();">
+                        <ol>
+                            <li>New training program launced!.</li>
+                            <li>Register now for exclusive workshops.</li>
+                            <li>Join us for the annual sports day on March 30th.</li>
+                            <li>Submit your project proposals by March 20th.</li>
+                        </ol>
+                    </marquee>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">
+                <footer>
+                    <p>© 2025 Tech Innovators Inc. Designed by Jackson Bimenyimana</p>
+                    <a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a>
+                    <p>
+                        <a href="#"><img src="Images/facebook.png" alt="Facebook" width="20"></a>
+                        <a href="#"><img src="Images/instagram.png" alt="Instagram" width="20"></a>
+                        <a href="#"><img src="Images/linkedin.png" alt="LinkedIn" width="20"></a>
+                    </p>
+                </footer>
+                <a href="#up">Back To Top</a>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function toggleDarkMode() {
+            const body = document.getElementById('body');
+            if (body.style.backgroundColor === 'black') {
+                body.style.backgroundColor = 'white';
+                body.style.color = 'black';
+            } else {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+            }
+        }
+    </script>
+</body>
+</html>

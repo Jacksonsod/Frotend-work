@@ -3,76 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPRC KARONGI</title>
+    <title>Login - RP Karongi College</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table border="0" width="100%" cellspacing="0" cellpadding="0">
-        <tr>
-            <td>
-                <img src="images/logo.png" alt="IPRC KARONGI" width="100px" height="100px">
-            </td>
-            <td align="right">
-                <h1>IPRC KARONGI</h1>
-            </td>
-            <td align="right">
-                <input type="text" placeholder="search here ..." >
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="RP Logo" class="logo">
+            <h1>RP KARONGI COLLEGE</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Search here...">
                 <button>🔍</button>
-            </td>
-        </tr>
-    </table>
-    <table border="1" width="100%" cellspacing="0" cellpadding="0">
-        <tr>
-            <td colspan="3" align="center">
-                <table border="1" width="90%" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td align="center"><a href="index.html">HOME</a></td>
-                        <td align="center"><a href="register.html">REGISTRATION</a></td>
-                        <td align="center"><a href="about.html">ABOUT</a></td>
-                        <td align="center"><a href="contact.html">CONTACT</a></td>
-                        <td align="center"><a href="login.html">LOGIN</a></td>
-                    </tr>
-                </table>
-            </td>
-        </tr><br>
-        <tr>
-            <td width="60%" valign="top"><br><br>
-                <center>
-                    <form action="" method="post">
-                        <input type="email" id="email" name="email" placeholder="Enter email"><br><br><br>
-                        <input type="password" id="password" name="password" placeholder="Enter password"><br><br><br>
-                        <input type="submit" value="Login"> <button><a href="index.html">cancel</a></button><br><br>
-                    </form>
-                </center>
-            </td>
-            <td width="35%">
-                <h3 align="center">ANNOUNCEMENT</h3>
-                <marquee behavior="scroll" direction="up" scrollamount="1">
-                    <p><center>Academic Calendar 2024-2025</p>
-                    <p>Monday, 23 December, 2024</center></p>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="register.html">REGISTRATION</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="login.html">LOGIN</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-form">
+            <div class="content">
+                <h2>LOGIN FORM</h2>
+                <form>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                    
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <aside class="announcement">
+                <h3>ANNOUNCEMENT</h3>
+                <marquee behavior="scroll" direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
+                    Academic Calendar 2024-2025 for Continuing students (y3) - Monday, 23 December, 2024
                 </marquee>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <p>USEFUL LINKS
-                    <a href="https://www.youtube.com" target="_blank">
-                        <img src="images/youtube.png" alt="YouTube" width="20px" height="20px">
-                    </a>
-                    <a href="https://www.twitter.com" target="_blank">
-                        <img src="images/twitter.png" alt="Twitter" width="20px" height="20px">
-                    </a>
-                    <a href="https://www.linkedin.com" target="_blank">
-                        <img src="images/linkedin.png" alt="LinkedIn" width="20px" height="20px">
-                    </a>
-                    <a href="https://www.facebook.com" target="_blank">
-                        <img src="images/facebook.png" alt="Facebook" width="20px" height="20px">
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank">
-                        <img src="images/instagram.png" alt="Instagram" width="20px" height="20px">
-                    </a>
-                </p>
-            </td>
-        </tr>
-    </table>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>USEFUL LINKS</p>
+        <div class="social-links">
+            <a href="#"><img src="youtube.png" alt="YouTube"></a>
+            <a href="#"><img src="x.png" alt="X"></a>
+            <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
 </body>
 </html>

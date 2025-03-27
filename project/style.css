@@ -1,0 +1,341 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #004080;
+  color: white;
+}
+
+header img {
+  width: 50px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+header button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0073e6;
+  color: white;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #005bb5;
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  justify-content: center; /* Center-align the navigation links */
+  align-items: center;
+  gap: 20px; /* Add spacing between links */
+  background-color: #004080; /* Background color for the navigation bar */
+  padding: 15px 0; /* Add padding for better spacing */
+}
+
+nav a {
+  color: white; /* Text color for navigation links */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1rem; /* Font size for links */
+  font-weight: bold; /* Make the text bold */
+  padding: 10px 20px; /* Add padding for clickable area */
+  border-radius: 5px; /* Rounded corners for links */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+nav a:hover {
+  background-color: #0073e6; /* Highlighted background color on hover */
+  color: #fff; /* Ensure text remains visible on hover */
+  text-decoration: none; /* Keep links clean without underlines */
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  z-index: 1;
+  border-radius: 5px; /* Rounded corners for dropdown */
+}
+
+.dropdown-content a {
+  color: #004080; /* Text color for dropdown links */
+  padding: 10px 15px; /* Add padding for dropdown items */
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1; /* Light background on hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
+
+/* Registration Form Styles */
+.registration-form {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form h1 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+fieldset legend {
+  font-weight: bold;
+  color: #004080;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0073e6;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #005bb5;
+}
+
+/* Main Content Styles */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+section {
+  flex: 3;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+section p {
+  margin-bottom: 20px;
+}
+
+section img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+article h4 {
+  color: #0073e6;
+  margin-bottom: 5px;
+}
+
+article p {
+  color: #555;
+}
+
+/* Aside Styles */
+aside {
+  flex: 1;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+aside h3 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+aside marquee {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Announcements Section */
+aside.announcements {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+aside h3 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+aside marquee {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #004080;
+  color: white;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #0073e6;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer img {
+  margin: 0 5px;
+  vertical-align: middle;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode header {
+  background-color: #222;
+}
+
+.dark-mode nav {
+  background-color: #444;
+}
+
+.dark-mode footer {
+  background-color: #222;
+}
+
+.dark-mode a {
+  color: #66b3ff;
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: #555;
+  color: white;
+  border: 1px solid #777;
+}
+
+.dark-mode input[type="submit"],
+.dark-mode input[type="reset"] {
+  background-color: #666;
+}
+
+.dark-mode input[type="submit"]:hover,
+.dark-mode input[type="reset"]:hover {
+  background-color: #888;
+}
