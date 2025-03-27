@@ -3,30 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - RP Karongi College</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="body">
     <header>
-        <div class="container">
-            <img src="logo.png" alt="RP Logo" class="logo">
-            <h1>RP KARONGI COLLEGE</h1>
-            <div class="search-box">
-                <input type="text" placeholder="Search here...">
-                <button>🔍</button>
+        <img src="Images/logo.png" alt="Logo">
+        <h1>Tech Innovators Inc.</h1>
+        <div>
+            <input type="text" placeholder="Type to search...">
+            <button>🔍</button>
+            <button onclick="toggleDarkMode()">Change Theme</button>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="registration.html">REGISTRATION</a>
+        <a href="about-us.html">ABOUT US</a>
+        <a href="contact-us.html">CONTACT US</a>
+        <a href="features.html">FEATURES</a>
+        <div class="dropdown">
+            <a href="#">SERVICES</a>
+            <div class="dropdown-content">
+                <a href="web-development.html">Web Development</a>
+                <a href="app-development.html">App Development</a>
+                <a href="cloud-services.html">Cloud Services</a>
             </div>
         </div>
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="register.html">REGISTRATION</a>
-            <a href="about.html">ABOUT</a>
-            <a href="contact.html">CONTACT</a>
-            <a href="login.html">LOGIN</a>
-        </nav>
-    </header>
-
+        <div class="dropdown">
+            <a href="#">TRAINING</a>
+            <div class="dropdown-content">
+                <a href="ai-training.html">AI Training</a>
+                <a href="web-design-training.html">Web Design Training</a>
+                <a href="data-science-training.html">Data Science Training</a>
+            </div>
+            
+        </div>
+        <a href="login.html">LOGIN</a>
+    </nav>
     <main>
-        <section class="login-form">
+        <section class="registration-form">
             <div class="content">
                 <h2>LOGIN FORM</h2>
                 <form>
@@ -36,27 +52,46 @@
                     <label for="password">Password:</label>
                     <input type="password" id="password" placeholder="Enter password" required>
                     
-                    <button type="submit">Login</button>
+                    <input type="submit" value="Login">
                 </form>
             </div>
-            <aside class="announcement">
-                <h3>ANNOUNCEMENT</h3>
-                <marquee behavior="scroll" direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
-                    Academic Calendar 2024-2025 for Continuing students (y3) - Monday, 23 December, 2024
-                </marquee>
-            </aside>
         </section>
-    </main>
-
+        <aside class="announcements">
+            <h3>ANNOUNCEMENTS</h3>
+            <marquee behavior="scroll" direction="up" scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();">
+                <ol>
+                    <li>New training program launched!</li>
+                    <li>Register now for exclusive workshops.</li>
+                    <li>Join us for the annual sports day on March 30th.</li>
+                    <li>Submit your project proposals by March 20th.</li>
+                </ol>
+            </marquee>
+        </aside>
+    </main>    
     <footer>
-        <p>USEFUL LINKS</p>
+        <p>© 2025 Tech Innovators Inc. Designed by Jackson Bimenyimana</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a>
         <div class="social-links">
-            <a href="#"><img src="youtube.png" alt="YouTube"></a>
-            <a href="#"><img src="x.png" alt="X"></a>
-            <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
-            <a href="#"><img src="facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="Images/youtube.png" alt="YouTube" width="20"></a>
+            <a href="#"><img src="Images/x.png" alt="X" width="20"></a>
+            <a href="#"><img src="Images/linkedin.png" alt="LinkedIn" width="20"></a>
+            <a href="#"><img src="Images/facebook.png" alt="Facebook" width="20"></a>
+            <a href="#"><img src="Images/instagram.png" alt="Instagram" width="20"></a>
         </div>
+        <a href="#body">Back To Top</a>
     </footer>
+    <script>
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            const body = document.getElementById('body');
+            if (body.style.backgroundColor === 'black') {
+                body.style.backgroundColor = 'white';
+                body.style.color = 'black';
+            } else {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+            }
+        }
+    </script>
 </body>
 </html>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT US</title>
+    <title>about-us</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
     <header>
-        <img src="Images/logo.png" alt="Logo" width="50">
-        <h1>Tech Innovators Inc.</h1>
+        <img src="Images/logo.png" alt="Logo">
+        <h1 id="up">Tech Innovators Inc.</h1>
         <div>
             <input type="text" placeholder="Type to search...">
             <button>🔍</button>
@@ -22,6 +22,24 @@
         <a href="about-us.html">ABOUT US</a>
         <a href="contact-us.html">CONTACT US</a>
         <a href="features.html">FEATURES</a>
+        <div class="dropdown">
+            <a href="#">SERVICES</a>
+            <div class="dropdown-content">
+                <a href="web-development.html">Web Development</a>
+                <a href="app-development.html">App Development</a>
+                <a href="cloud-services.html">Cloud Services</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">TRAINING</a>
+            <div class="dropdown-content">
+                <a href="ai-training.html">AI Training</a>
+                <a href="web-design-training.html">Web Design Training</a>
+                <a href="data-science-training.html">Data Science Training</a>
+            </div>
+            
+        </div>
+        <a href="login.html">LOGIN</a>
     </nav>
     <main>
         <section>
@@ -96,7 +114,7 @@
             <a href="#"><img src="Images/instagram.png" alt="Instagram" width="20"></a>
             <a href="#"><img src="Images/linkedin.png" alt="LinkedIn" width="20"></a>
         </div>
-        <a href="#up">Back To Top</a>
+        <a href="#body">Back To Top</a>
     </footer>
     <script>
         function toggleDarkMode() {

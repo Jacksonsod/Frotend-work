@@ -345,11 +345,11 @@ footer p {
 
 .dark-mode {
   background-color: #333;
-  color: white;
+  color: black;
 }
 
 .dark-mode .text {
-  color: black;
+  color: white;
 }
 
 .dark-mode header {
@@ -396,9 +396,6 @@ table {
 
 table th, table td {
   padding: 12px 15px;
-  border: 1px solid #ddd;
-}
-
 table th {
   background-color: #004080;
   color: white;
@@ -439,4 +436,8 @@ ul li {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+#apiData{
+  text-align: left;
+  max-width: 50px;
 }
