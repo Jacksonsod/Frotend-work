@@ -4,45 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT US</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-            <td align="center">
-                <img src="Images/logo.png" alt="Logo" width="50">
-            </td>
-            <td align="right">
-                <h1 id="up">Tech Innovators Inc.</h1>
-            </td>
-            <td align="center">
-                <input type="text" placeholder="Type to search...">
-                <button>🔍</button>
-                <button onclick="toggleDarkMode()">Change Theme</button>
-            </td>
-        </tr>
-    </table>
-    <table width="100%" border="1" cellspacing="0" cellpadding="0">
-        <tr>
-            <td colspan="3" align="center">
-                <a href="index.html"><button>HOME</button></a>
-                <a href="registration.html"><button>REGISTRATION</button></a>
-                <a href="#"><button>ABOUT US</button></a>
-                <a href="contact-us.html"><button>CONTACT US</button></a>
-                <a href="features.html"><button>FEATURES</button></a>
-                
-            </td>
-        </tr>
-        <tr>
-            <td valign="top" colspan="2" width="80%">
-                <br>
-                <h1 align="center">ABOUT US</h1>
-                <table border="1" align="center" cellpadding="5" cellspacing="0" width="60%">
+    <header>
+        <img src="Images/logo.png" alt="Logo" width="50">
+        <h1>Tech Innovators Inc.</h1>
+        <div>
+            <input type="text" placeholder="Type to search...">
+            <button>🔍</button>
+            <button onclick="toggleDarkMode()">Change Theme</button>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="registration.html">REGISTRATION</a>
+        <a href="about-us.html">ABOUT US</a>
+        <a href="contact-us.html">CONTACT US</a>
+        <a href="features.html">FEATURES</a>
+    </nav>
+    <main>
+        <section>
+            <h1>ABOUT US</h1>
+            <h2>Our Team</h2>
+            <table>
+                <thead>
                     <tr>
                         <th>S/N</th>
                         <th>Name</th>
                         <th>Role</th>
                         <th>Email</th>
                     </tr>
+                </thead>
+                <tbody>
                     <tr>
                         <td>1</td>
                         <td>Sangwa Josephat</td>
@@ -55,83 +49,59 @@
                         <td>DDO</td>
                         <td>Jacksonbimenyimana3@gmail.com</td>
                     </tr>
-                </table>
-                <table align="center" border="0">
-                    <tr>
-                        <td>
-                            <h3>Technologies we use:</h3>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ol>
-                                <li>Django</li>
-                                <li>JS</li>
-                                <li>Java</li>
-                                <li>Node.js</li>
-                            </ol>
-                        </td>
-                    </tr>
-                </table>
-                <br>
-                <h3 align="center">FAQ</h3>
-                <details>
-                    <summary>What services do you offer?</summary>
-                    <p>We offer a wide range of services including web development, mobile app development, AI and machine learning solutions, and comprehensive training programs.</p>
-                </details>
-                <details>
-                    <summary>How can I register for a training program?</summary>
-                    <p>You can register for our training programs through the registration page on our website. Simply fill out the form and submit your details.</p>
-                </details>
-                <details>
-                    <summary>Where are you located?</summary>
-                    <p>We are located at 123 Tech Innovators Street, Innovation City, Techland.</p>
-                </details>
-                <details>
-                    <summary>How can I contact you?</summary>
-                    <p>You can contact us through the contact page on our website or email us at contact@techinnovators.com.</p>
-                </details>
-                <br><br><br><br><br><br><br><br><br><br><br>
-            </td>
-            <td valign="top">
-                <h3 align="center">ANNOUNCEMENTS</h3>
-                <pre align="center">
-                    <marquee behavior="scroll" direction="up" scrollamount="1" loop="-1" height="200" scrolldelay="-1" width="400" onmouseover="this.stop();" onmouseout="this.start();">
-                        <ol>
-                            <li>New training program launced!.</li>
-                            <li>Register now for exclusive workshops.</li>
-                            <li>Join us for the annual sports day on March 30th.</li>
-                            <li>Submit your project proposals by March 20th.</li>
-                        </ol>
-                    </marquee>
-                </pre>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" align="center">
-                <footer>
-                    <p>© 2025 Tech Innovators Inc. Designed by Jacksonbimenyimana</p>
-                    <a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a>
-                    <p>
-                        <a href="#"><img src="Images/facebook.png" alt="Facebook" width="20"></a>
-                        <a href="#"><img src="Images/instagram.png" alt="Instagram" width="20"></a>
-                        <a href="#"><img src="Images/linkedin.png" alt="LinkedIn" width="20"></a>
-                    </p>
-                </footer>
-                <a href="#up">Back To Top</a>
-            </td>
-        </tr>
-    </table>
+                </tbody>
+            </table>
+            <h2>Technologies We Use</h2>
+            <ul>
+                <li>Django</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>Node.js</li>
+            </ul>
+            <h2>FAQ</h2>
+            <details>
+                <summary>What services do you offer?</summary>
+                <p>We offer a wide range of services including web development, mobile app development, AI and machine learning solutions, and comprehensive training programs.</p>
+            </details>
+            <details>
+                <summary>How can I register for a training program?</summary>
+                <p>You can register for our training programs through the registration page on our website. Simply fill out the form and submit your details.</p>
+            </details>
+            <details>
+                <summary>Where are you located?</summary>
+                <p>We are located at 123 Tech Innovators Street, Innovation City, Techland.</p>
+            </details>
+            <details>
+                <summary>How can I contact you?</summary>
+                <p>You can contact us through the contact page on our website or email us at contact@techinnovators.com.</p>
+            </details>
+        </section>
+        <aside class="announcements">
+            <h3>ANNOUNCEMENTS</h3>
+            <marquee behavior="scroll" direction="up" scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();">
+                <ol>
+                    <li>New training program launched!</li>
+                    <li>Register now for exclusive workshops.</li>
+                    <li>Join us for the annual sports day on March 30th.</li>
+                    <li>Submit your project proposals by March 20th.</li>
+                </ol>
+            </marquee>
+        </aside>
+    </main>
+    <footer>
+        <p>© 2025 Tech Innovators Inc. Designed by Jackson Bimenyimana</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a>
+        <div class="social-links">
+            <a href="#"><img src="Images/facebook.png" alt="Facebook" width="20"></a>
+            <a href="#"><img src="Images/instagram.png" alt="Instagram" width="20"></a>
+            <a href="#"><img src="Images/linkedin.png" alt="LinkedIn" width="20"></a>
+        </div>
+        <a href="#up">Back To Top</a>
+    </footer>
     <script>
         function toggleDarkMode() {
             const body = document.getElementById('body');
-            if (body.style.backgroundColor === 'black') {
-                body.style.backgroundColor = 'white';
-                body.style.color = 'black';
-            } else {
-                body.style.backgroundColor = 'black';
-                body.style.color = 'white';
-            }
+            body.classList.toggle('dark-mode');
         }
     </script>
 </body>

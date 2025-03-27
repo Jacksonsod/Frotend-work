@@ -41,62 +41,43 @@
     </nav>
     <main>
         <section class="registration-form">
-            <h1>REGISTRATION FORM</h1>
+            <h1>Registration Form</h1>
             <form>
                 <fieldset>
                     <legend>Personal Information</legend>
-                    <label for="name">Full Names:</label><br>
-                    <input type="text" name="name" id="name" required><br><br>
-                    <label for="dob">Date of birth:</label><br>
-                    <input type="date" name="dob" id="dob" required><br><br>
-                    <label for="gender">Gender:</label><br>
-                    <input type="radio" name="gender" id="male" value="male">
-                    <label for="male">Male</label>
-                    <input type="radio" name="gender" id="female" value="female">
-                    <label for="female">Female</label>
-                    <input type="radio" name="gender" id="other" value="other">
-                    <label for="other">Other</label><br><br>
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend>Contact Information</legend>
-                    <label for="email">Email:</label><br>
-                    <input type="email" name="email" id="email" required><br><br>
-                    <label for="phone">Phone:</label><br>
-                    <input type="tel" name="phone" id="phone" required><br><br>
-                    <label for="address">Address:</label><br>
-                    <textarea name="address" id="address" cols="30" rows="5" required></textarea><br><br>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
                 </fieldset>
-                <fieldset>
-                    <legend>Account Information</legend>
-                    <label for="username">Username:</label><br>
-                    <input type="text" name="username" id="username" required><br><br>
-                    <label for="password">Password:</label><br>
-                    <input type="password" name="password" id="password" required><br><br>
-                    <label for="confirm">Confirm Password:</label><br>
-                    <input type="password" name="confirm" id="confirm" required><br><br>
-                </fieldset>
-                <fieldset>
-                    <legend>Preferences</legend>
-                    <label for="newsletter">Newsletter Subscription</label>
-                    <input type="checkbox" name="newsletter" id="newsletter"><br><br>
-                    <label for="communication">Preferred Communication Method</label>
-                    <select name="communication" id="communication">
-                        <option value="email">Email</option>
-                        <option value="phone">Phone</option>
-                        <option value="both">Both</option>
-                    </select><br><br>
-                </fieldset>
-                <fieldset>
-                    <legend>Additional Information</legend>
-                    <label for="profile">Profile Picture:</label>
-                    <input type="file" name="profile" id="profile"><br><br>
-                    <label for="bio">Bio:</label><br>
-                    <textarea name="bio" id="bio" cols="30" rows="5" required></textarea><br><br>
-                </fieldset>
-                <fieldset>
+                <div class="form-actions">
                     <input type="submit" value="Submit">
                     <input type="reset" value="Reset">
-                </fieldset>
+                </div>
             </form>
         </section>
 
@@ -121,12 +102,12 @@
             <a href="#"><img src="Images/instagram.png" alt="Instagram" width="20"></a>
             <a href="#"><img src="Images/linkedin.png" alt="LinkedIn" width="20"></a>
         </p>
-        <a href="#up">Back To Top</a>
+        <a href="#up">Back to top</a>
     </footer>
 
     <script>
         function toggleDarkMode() {
-            const body = document.getElementById('body');
+            var body = document.getElementById('body');
             body.classList.toggle('dark-mode');
         }
     </script>
