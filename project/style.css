@@ -13,6 +13,7 @@ body {
   color: #333;
 }
 
+/* Default styles for header and navigation */
 header {
   display: flex;
   justify-content: space-between;
@@ -33,6 +34,7 @@ header img {
 
 header h1 {
   font-size: 1.5rem;
+  margin-left: 10px;
 }
 
 header div {
@@ -61,6 +63,7 @@ header button:hover {
   background-color: #005bb5;
 }
 
+/* Default styles for navigation */
 nav {
   display: flex;
   justify-content: center;
@@ -88,7 +91,125 @@ nav a {
 nav a:hover {
   background-color: #0073e6;
   color: #fff;
-  text-decoration: none;
+}
+
+/* Hide menu toggle checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Menu icon for smaller screens */
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #004080;
+    color: white;
+  }
+
+  header img {
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+    flex: 1;
+    text-align: center;
+    margin: 0;
+  }
+
+  header div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  header input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  header button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Navigation adjustments */
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    background-color: #004080;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  nav a:hover {
+    background-color: #0073e6;
+  }
+
+  /* Menu icon adjustments */
+  .menu-icon {
+    display: block;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  /* Show navigation links when menu toggle is checked */
+  .menu-toggle:checked + label + nav {
+    display: flex;
+  }
+}
+
+/* Responsive styles for very small screens (mobile) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
 }
 
 .dropdown {
@@ -343,47 +464,67 @@ footer p {
   margin: 10px 0;
 }
 
-.dark-mode {
-  background-color: #333;
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+/* Hide Checkbox */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider (Switch Button) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+/* Circle inside the slider */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* Change slider color when checked */
+input:checked + .slider {
+  background-color: #000000;
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+/* Default Light Mode */
+body {
+  background-color: white;
   color: black;
+  text-align: center;
+  transition: background 0.4s, color 0.4s;
 }
 
-.dark-mode .text {
+/* Dark Mode when Checkbox is Checked */
+body:has(#modeToggle:checked) {
+  background-color: black;
   color: white;
-}
-
-.dark-mode header {
-  background-color: #222;
-}
-
-.dark-mode nav {
-  background-color: #444;
-}
-
-.dark-mode footer {
-  background-color: #222;
-}
-
-.dark-mode a {
-  color: #66b3ff;
-}
-
-.dark-mode input,
-.dark-mode textarea,
-.dark-mode select {
-  background-color: #555;
-  color: white;
-  border: 1px solid #777;
-}
-
-.dark-mode input[type="submit"],
-.dark-mode input[type="reset"] {
-  background-color: #666;
-}
-
-.dark-mode input[type="submit"]:hover,
-.dark-mode input[type="reset"]:hover {
-  background-color: #888;
 }
 
 table {
