@@ -13,7 +13,6 @@ body {
   color: #333;
 }
 
-/* Default styles for header and navigation */
 header {
   display: flex;
   justify-content: space-between;
@@ -34,7 +33,6 @@ header img {
 
 header h1 {
   font-size: 1.5rem;
-  margin-left: 10px;
 }
 
 header div {
@@ -197,18 +195,6 @@ nav a:hover {
   /* Show navigation links when menu toggle is checked */
   .menu-toggle:checked + label + nav {
     display: flex;
-  }
-}
-
-/* Responsive styles for very small screens (mobile) */
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1rem;
-  }
-
-  nav a {
-    font-size: 0.9rem;
-    padding: 8px 10px;
   }
 }
 
@@ -416,25 +402,25 @@ aside marquee {
   color: #333;
 }
 
+/* Announcements Section */
 aside.announcements {
-  max-width: 500px;
-  margin: 20px auto;
-  background-color: #e6f0ff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border: 1px solid #004080;
+  flex: 1; /* Allows the announcements section to take up available space */
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 20px; /* Adds spacing inside the section */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 aside.announcements h3 {
-  color: #004080;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
+  color: #004080; /* Theme color for the heading */
+  margin-bottom: 10px; /* Adds spacing below the heading */
+  font-size: 1.2rem; /* Slightly larger font size for emphasis */
+  text-align: center; /* Centers the heading text */
 }
 
 aside.announcements marquee {
-  font-size: 0.9rem;
-  color: #333;
+  font-size: 0.9rem; /* Font size for the scrolling text */
+  color: #333; /* Neutral color for readability */
 }
 
 footer {
@@ -507,13 +493,13 @@ footer p {
 
 /* Change slider color when checked */
 input:checked + .slider {
-  background-color: #000000;
+  background-color: #4CAF50;
 }
 
 input:checked + .slider::before {
   transform: translateX(24px);
 }
-/* Default Light Mode */
+  /* Default Light Mode */
 body {
   background-color: white;
   color: black;
@@ -526,6 +512,8 @@ body:has(#modeToggle:checked) {
   background-color: black;
   color: white;
 }
+
+
 
 table {
   width: 100%;

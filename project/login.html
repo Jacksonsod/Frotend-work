@@ -9,12 +9,17 @@
 <body id="body">
     <header>
         <img src="Images/logo.png" alt="Logo">
-        <h1>Tech Innovators Inc.</h1>
+        <h1 id="up">Tech Innovators Inc.</h1>
         <div>
             <input type="text" placeholder="Type to search...">
             <button>🔍</button>
-            <button onclick="toggleDarkMode()">Change Theme</button>
-        </div>
+            <label class="toggle-switch" for="modeToggle"> 
+                <input type="checkbox" id="modeToggle" title="Toggle Mode">
+                <span class="slider"></span>
+              </label>      
+         </div>
+         <input type="checkbox" id="menuToggle" class="menu-toggle">
+    <label for="menuToggle" class="menu-icon">☰</label>
     </header>
     <nav>
         <a href="index.html">HOME</a>

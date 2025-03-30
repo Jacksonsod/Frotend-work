@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about-us</title>
+    <title>About us</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
@@ -13,8 +13,13 @@
         <div>
             <input type="text" placeholder="Type to search...">
             <button>🔍</button>
-            <button onclick="toggleDarkMode()">Change Theme</button>
-        </div>
+            <label class="toggle-switch" for="modeToggle"> 
+                <input type="checkbox" id="modeToggle" title="Toggle Mode">
+                <span class="slider"></span>
+              </label>      
+         </div>
+         <input type="checkbox" id="menuToggle" class="menu-toggle">
+    <label for="menuToggle" class="menu-icon">☰</label>
     </header>
     <nav>
         <a href="index.html">HOME</a>
@@ -70,7 +75,7 @@
                 </tbody>
             </table>
             <h2>Technologies We Use</h2>
-            <ul>
+            <ul class="technologies">
                 <li>Django</li>
                 <li>JavaScript</li>
                 <li>Java</li>
@@ -116,11 +121,5 @@
         </div>
         <a href="#body">Back To Top</a>
     </footer>
-    <script>
-        function toggleDarkMode() {
-            const body = document.getElementById('body');
-            body.classList.toggle('dark-mode');
-        }
-    </script>
 </body>
 </html>

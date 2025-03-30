@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>contact-us</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
@@ -13,8 +13,13 @@
         <div>
             <input type="text" placeholder="Type to search...">
             <button>🔍</button>
-            <button onclick="toggleDarkMode()">Change Theme</button>
-        </div>
+            <label class="toggle-switch" for="modeToggle"> 
+                <input type="checkbox" id="modeToggle" title="Toggle Mode">
+                <span class="slider"></span>
+              </label>      
+         </div>
+         <input type="checkbox" id="menuToggle" class="menu-toggle">
+    <label for="menuToggle" class="menu-icon">☰</label>
     </header>
     <nav>
         <a href="index.html">HOME</a>
