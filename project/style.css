@@ -250,7 +250,6 @@ input:checked + .slider::before {
     height: 30%;
     background-color: #003366;
   }
-
   .slider::before {
       height: 16px;
       width: 16px;
@@ -488,7 +487,7 @@ aside.announcements {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 #space{
-  margin-top: 3cm;
+  margin-top: 3.5cm;
 }
 
 aside.announcements h3 {
