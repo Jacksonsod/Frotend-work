@@ -5,49 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+       
+    </style>
 </head>
-<body id="body">
+<body>
     <header>
-        <img src="Images/logo.png" alt="Logo">
-        <h1 id="up">Tech Innovators Inc.</h1>
-        <div>
-            <input type="text" placeholder="Type to search...">
+        <div class="logo">
+            <img src="Images/logo.png" alt="Logo">
+            <h1>Tech Innovators Inc.</h1>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search..." aria-label="Search">
             <button>🔍</button>
-            <label class="toggle-switch" for="modeToggle"> 
-                <input type="checkbox" id="modeToggle" title="Toggle Mode">
-                <span class="slider"></span>
-              </label>      
-         </div>
-         <input type="checkbox" id="menuToggle" class="menu-toggle">
-    <label for="menuToggle" class="menu-icon">☰</label>
+        </div>
+        <label class="toggle-switch" for="modeToggle"> 
+            <input type="checkbox" id="modeToggle" title="Toggle Mode">
+            <span class="slider"></span>
+          </label>
     </header>
     <nav>
-        <a href="index.html">HOME</a>
-        <a href="registration.html">REGISTRATION</a>
-        <a href="about-us.html">ABOUT US</a>
-        <a href="contact-us.html">CONTACT US</a>
-        <a href="features.html">FEATURES</a>
-        <div class="dropdown">
-            <a href="#">SERVICES</a>
-            <div class="dropdown-content">
-                <a href="web-development.html">Web Development</a>
-                <a href="app-development.html">App Development</a>
-                <a href="cloud-services.html">Cloud Services</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#">TRAINING</a>
-            <div class="dropdown-content">
-                <a href="ai-training.html">AI Training</a>
-                <a href="web-design-training.html">Web Design Training</a>
-                <a href="data-science-training.html">Data Science Training</a>
-            </div>
-            
-        </div>
-        <a href="login.html">LOGIN</a>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li class="dropdown">
+                <a href="#">Services ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="app-development.html">App Development</a></li>
+                    <li><a href="cloud-services.html">Cloud Services</a></li>
+                </ul>
+            </li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
     </nav>
     <main>
-        <section class="text">
+        <section class="text" id="space">
             <h2>WELCOME TO Tech Innovators Inc.</h2>
             <p class="text">
                 Tech Innovators Inc. is a leading provider of cutting-edge technology solutions and comprehensive training programs. Our mission is to empower businesses and individuals with the latest advancements in technology, ensuring they stay ahead in a rapidly evolving digital landscape.
@@ -63,7 +62,7 @@
                 <p>As technology continues to evolve, so do the trends in web development. In 2025, we are seeing a shift towards more interactive and user-friendly web experiences. Here are the top 5 trends to watch out for...</p>
             </article>
         </section>
-        <aside class="announcements">
+        <aside class="announcements" id="space">
             <h3>ANNOUNCEMENTS</h3>
             <marquee behavior="scroll" direction="up" scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();">
                 <ol>

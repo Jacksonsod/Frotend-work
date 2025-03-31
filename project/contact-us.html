@@ -8,56 +8,52 @@
 </head>
 <body id="body">
     <header>
-        <img src="Images/logo.png" alt="Logo">
-        <h1 id="up">Tech Innovators Inc.</h1>
-        <div>
-            <input type="text" placeholder="Type to search...">
+        <div class="logo">
+            <img src="Images/logo.png" alt="Logo">
+            <h1>Tech Innovators Inc.</h1>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search..." aria-label="Search">
             <button>🔍</button>
-            <label class="toggle-switch" for="modeToggle"> 
-                <input type="checkbox" id="modeToggle" title="Toggle Mode">
-                <span class="slider"></span>
-              </label>      
-         </div>
-         <input type="checkbox" id="menuToggle" class="menu-toggle">
-    <label for="menuToggle" class="menu-icon">☰</label>
+        </div>
+        <label class="toggle-switch" for="modeToggle"> 
+            <input type="checkbox" id="modeToggle" title="Toggle Mode">
+            <span class="slider"></span>
+          </label>
     </header>
     <nav>
-        <a href="index.html">HOME</a>
-        <a href="registration.html">REGISTRATION</a>
-        <a href="about-us.html">ABOUT US</a>
-        <a href="contact-us.html">CONTACT US</a>
-        <a href="features.html">FEATURES</a>
-        <div class="dropdown">
-            <a href="#">SERVICES</a>
-            <div class="dropdown-content">
-                <a href="web-development.html">Web Development</a>
-                <a href="app-development.html">App Development</a>
-                <a href="cloud-services.html">Cloud Services</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#">TRAINING</a>
-            <div class="dropdown-content">
-                <a href="ai-training.html">AI Training</a>
-                <a href="web-design-training.html">Web Design Training</a>
-                <a href="data-science-training.html">Data Science Training</a>
-            </div>
-            
-        </div>
-        <a href="login.html">LOGIN</a>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li class="dropdown">
+                <a href="#">Services ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="app-development.html">App Development</a></li>
+                    <li><a href="cloud-services.html">Cloud Services</a></li>
+                </ul>
+            </li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
     </nav>
     <main>
-        <section class="contact-form">
+        <section class="contact-form" id="space">
             <h1>CONTACT US</h1>
             <form>
                 <label for="name">Names:</label>
-                <input type="text" name="name" id="name" required>
+                <input type="text" name="name" id="name" placeholder="Enter names" required>
                 
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" placeholder="Enter email" required>
                 
                 <label for="message">Message:</label>
-                <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
                 
                 <input type="submit" value="Submit">
             </form>
@@ -66,7 +62,7 @@
         <section class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5162573913726!2d30.05661857396137!3d-1.9464378980359067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca423fc9c565b%3A0x7a79f00846c5640d!2sSALTEL!5e0!3m2!1sen!2srw!4v1742456886377!5m2!1sen!2srw" width="500" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
-        <aside class="announcements">
+        <aside class="announcements" id="space">
             <h3>ANNOUNCEMENTS</h3>
             <marquee behavior="scroll" direction="up" scrollamount="1" loop="-1" height="200" scrolldelay="-1" onmouseover="this.stop();" onmouseout="this.start();">
                 <ol>

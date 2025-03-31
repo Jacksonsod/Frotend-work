@@ -1,18 +1,44 @@
+/* Reset and Basic Styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
   font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding-top: 120px;
-  background-color: #f9f9f9;
-  color: #333;
 }
 
+/* Default Light Mode */
+body {
+  background-color: white;
+  color: black;
+  text-align: center;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* Dark Mode when Checkbox is Checked */
+body:has(#modeToggle:checked) {
+  background-color: black;
+  color: black;
+}
+
+/* Dark Mode Styles */
+body:has(#modeToggle:checked) header,
+body:has(#modeToggle:checked) nav,
+body:has(#modeToggle:checked) footer {
+  background-color: #222;
+}
+
+body:has(#modeToggle:checked) nav ul li a,
+body:has(#modeToggle:checked) .dropdown-content a {
+  color: #ddd;
+}
+
+body:has(#modeToggle:checked) .search-box input {
+  background-color: #333;
+  color: white;
+  border: 1px solid white;
+}
+
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -20,214 +46,262 @@ header {
   padding: 15px 20px;
   background-color: #004080;
   color: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Make the header fixed */
+  top: 0; /* Position it at the top */
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 1000; /* Ensure it stays above other elements */
 }
 
-header img {
-  width: 50px;
-}
-
-header h1 {
-  font-size: 1.5rem;
-}
-
-header div {
+.logo {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
-header input[type="text"] {
-  padding: 5px;
-  border: none;
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+/* Search Bar */
+.search-box {
+  display: flex;
+  align-items: center;
+ 
+  
   border-radius: 5px;
+}
+
+search-box input {
+  border: none;
+  padding: 2px;
   outline: none;
+  border-radius: 4px;
 }
 
-header button {
-  padding: 5px 10px;
+.search-box button {
+  background: none;
   border: none;
-  border-radius: 5px;
-  background-color: #0073e6;
-  color: white;
   cursor: pointer;
+  font-size: 1.5rem;
+
 }
 
-header button:hover {
-  background-color: #005bb5;
-}
-
-/* Default styles for navigation */
+/* Navigation */
 nav {
+  background-color: #003366;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed; /* Make the navigation fixed */
+  top: 80px; /* Position it below the header */
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 999; /* Ensure it stays above other elements but below the header */
+}
+
+nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
-  background-color: #004080;
-  padding: 10px 0;
-  position: fixed;
-  top: 60px;
-  width: 100%;
-  z-index: 999;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  gap: 15px;
+}
+
+nav ul li {
+  position: relative;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  padding: 10px 15px;
+  display: block;
   font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: 0.3s;
 }
 
 nav a:hover {
   background-color: #0073e6;
-  color: #fff;
 }
 
-/* Hide menu toggle checkbox */
-.menu-toggle {
-  display: none;
-}
-
-/* Menu icon for smaller screens */
-.menu-icon {
-  display: none;
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1001;
-}
-
-/* Responsive styles for smaller screens */
-@media (max-width: 768px) {
-  /* Header adjustments */
-  header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #004080;
-    color: white;
-  }
-
-  header img {
-    width: 40px;
-    margin-right: 10px;
-  }
-
-  header h1 {
-    font-size: 1.2rem;
-    flex: 1;
-    text-align: center;
-    margin: 0;
-  }
-
-  header div {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-    width: 100%;
-  }
-
-  header input[type="text"] {
-    flex: 1;
-    padding: 8px;
-    border-radius: 5px;
-    border: none;
-  }
-
-  header button {
-    padding: 8px 12px;
-    border-radius: 5px;
-    background-color: #0073e6;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-
-  /* Navigation adjustments */
-  nav {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px;
-    background-color: #004080;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-
-  nav a {
-    font-size: 1rem;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    width: 100%;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  nav a:hover {
-    background-color: #0073e6;
-  }
-
-  /* Menu icon adjustments */
-  .menu-icon {
-    display: block;
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
-    margin-left: auto;
-  }
-
-  /* Show navigation links when menu toggle is checked */
-  .menu-toggle:checked + label + nav {
-    display: flex;
-  }
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
+/* Dropdown Menu */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  min-width: 150px;
-  z-index: 1;
-  border-radius: 5px;
+  background: white;
+  min-width: 160px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-content a {
   color: #004080;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-  background-color: #0073e6;
+  padding: 10px;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* Mobile Navigation */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+/* Show Mobile Menu When Checked */
+#menu-toggle:checked + .menu-icon + ul {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+      display: block;
+  }
+  .logo h1{
+      font-size: 1rem;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #003366;
+  }
+
+  nav a {
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+  }
+
+  .search-box {
+      width: 100%;
+      justify-content: center;
+  }
+}
+
+/* Dark Mode Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  margin-left: 10px;
+}
+
+/* Hide Checkbox */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider (Switch Button) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+/* Circle inside the slider */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* Change slider color when checked */
+input:checked + .slider {
+  background-color: #020202;
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+/* RESPONSIVE DARK MODE TOGGLE */
+@media (max-width: 768px) {
+  .toggle-switch {
+      width: 45px;
+      height: 22px;
+  }
+  .slider{
+    width: 60%;
+    height: 30%;
+    background-color: #003366;
+  }
+
+  .slider::before {
+      height: 16px;
+      width: 16px;
+      left: 3px;
+      bottom: 3px;
+  }
+
+  input:checked + .slider::before {
+      transform: translateX(1px);
+  }
+}
+
+/* Extra Small Screens (Max 480px) */
+@media (max-width: 480px) {
+  .toggle-switch {
+      width: 40px;
+      height: 20px;
+  }
+
+  .slider::before {
+      height: 14px;
+      width: 14px;
+      left: 3px;
+      bottom: 3px;
+  }
+
+  input:checked + .slider::before {
+      transform: translateX(1px);
+  }
+}
+
+/* Specific Fix for 400px Screens */
+@media (max-width: 400px) {
+  .toggle-switch {
+      width: 38px;
+      height: 18px;
+  }
+
+  .slider::before {
+      height: 12px;
+      width: 12px;
+      left: 3px;
+      bottom: 3px;
+  }
+
+  input:checked + .slider::before {
+      transform: translateX(1px);
+  }
+}
+
+
 
 .registration-form {
   max-width: 600px;
@@ -237,6 +311,7 @@ nav a:hover {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
+  margin-top: 3cm;
 }
 
 .registration-form h1 {
@@ -264,6 +339,7 @@ label {
   margin-bottom: 8px;
   font-weight: bold;
   color: #333;
+  text-align: left;
 }
 
 input[type="text"],
@@ -347,6 +423,7 @@ main {
   flex-wrap: wrap;
   padding: 20px;
   gap: 20px;
+   /* Adjust based on the combined height of the header and nav */
 }
 
 section {
@@ -410,6 +487,9 @@ aside.announcements {
   border-radius: 10px; /* Rounded corners for a modern look */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+#space{
+  margin-top: 3cm;
+}
 
 aside.announcements h3 {
   color: #004080; /* Theme color for the heading */
@@ -450,73 +530,9 @@ footer p {
   margin: 10px 0;
 }
 
-/* Toggle Switch */
-.toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 26px;
-}
-
-/* Hide Checkbox */
-.toggle-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* Slider (Switch Button) */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  border-radius: 34px;
-  transition: 0.4s;
-}
-
-/* Circle inside the slider */
-.slider::before {
-  content: "";
-  position: absolute;
-  height: 18px;
-  width: 18px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  border-radius: 50%;
-  transition: 0.4s;
-}
-
-/* Change slider color when checked */
-input:checked + .slider {
-  background-color: #4CAF50;
-}
-
-input:checked + .slider::before {
-  transform: translateX(24px);
-}
-  /* Default Light Mode */
-body {
-  background-color: white;
-  color: black;
-  text-align: center;
-  transition: background 0.4s, color 0.4s;
-}
-
-/* Dark Mode when Checkbox is Checked */
-body:has(#modeToggle:checked) {
-  background-color: black;
-  color: white;
-}
-
-
 
 table {
-  width: 100%;
+  width: 80%;
   border-collapse: collapse;
   margin: 20px 0;
   font-size: 1rem;
@@ -551,6 +567,10 @@ ul li {
   color: #004080;
   font-weight: bold;
 }
+#features{
+  text-align: left;
+
+}
 
 .canvas-container {
     border: 2px solid #000;
@@ -560,7 +580,7 @@ ul li {
     margin: 20px 0; 
 }
 #task{
-    width: 40%;
+    width: 10%;
     padding: 12px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
