@@ -86,12 +86,10 @@
         </div>
         <a href="#up">Back To Top</a>
     </footer>
-
     <script>
-        function toggleDarkMode() {
-            var body = document.getElementById('body');
-            body.classList.toggle('dark-mode');
-        }
-    </script>
+    document.getElementById('modeToggle').addEventListener('change', function () {
+        document.body.classList.toggle('dark-mode', this.checked);
+      });
+      </script>
 </body>
 </html>

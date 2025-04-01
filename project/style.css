@@ -1,4 +1,14 @@
-/* Reset and Basic Styling */
+/* Define CSS variables for colors */
+:root {
+  --primary-color: #004080;
+  --secondary-color: #003366;
+  --accent-color: #0073e6;
+  --background-light: #f9f9f9;
+  --background-dark: #222;
+  --text-light: white;
+  --text-dark: black;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,50 +16,59 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Default Light Mode */
 body {
-  background-color: white;
-  color: black;
+  background-color: var(--text-light);
+  color: var(--text-dark);
   text-align: center;
   transition: background 0.4s, color 0.4s;
 }
 
-/* Dark Mode when Checkbox is Checked */
-body:has(#modeToggle:checked) {
-  background-color: black;
-  color: black;
+body.dark-mode {
+  background-color: var(--text-dark);
+  color: var(--text-light);
 }
 
-/* Dark Mode Styles */
-body:has(#modeToggle:checked) header,
-body:has(#modeToggle:checked) nav,
-body:has(#modeToggle:checked) footer {
-  background-color: #222;
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode section,
+body.dark-mode aside,
+body.dark-mode ol,
+body.dark-mode summary,
+body.dark-mode details,
+body.dark-mode label,
+body.dark-mode article p,
+body.dark-mode .toggle-switch,
+body.dark-mode footer {
+  background-color: var(--background-dark);
+  color: var(--text-light);
 }
 
-body:has(#modeToggle:checked) nav ul li a,
-body:has(#modeToggle:checked) .dropdown-content a {
-  color: #ddd;
+body.dark-mode aside {
+  color: var(--text-light);
 }
 
-body:has(#modeToggle:checked) .search-box input {
-  background-color: #333;
-  color: white;
-  border: 1px solid white;
+body.dark-mode nav ul li a,
+body.dark-mode .dropdown-content a {
+  color: var(--background-light);
 }
 
-/* Header */
+body.dark-mode .search-box input {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  border: 1px solid var(--text-light);
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background-color: #004080;
-  color: white;
-  position: fixed; /* Make the header fixed */
-  top: 0; /* Position it at the top */
-  width: 100%; /* Ensure it spans the full width */
-  z-index: 1000; /* Ensure it stays above other elements */
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 1000; 
 }
 
 .logo {
@@ -62,13 +81,11 @@ header {
   margin-right: 10px;
 }
 
-/* Search Bar */
 .search-box {
   display: flex;
   align-items: center;
- 
-  
   border-radius: 5px;
+  margin-top: 0.3cm;
 }
 
 search-box input {
@@ -76,6 +93,7 @@ search-box input {
   padding: 2px;
   outline: none;
   border-radius: 4px;
+ 
 }
 
 .search-box button {
@@ -83,18 +101,17 @@ search-box input {
   border: none;
   cursor: pointer;
   font-size: 1.5rem;
-
+  margin-bottom: 0.3cm;
 }
 
-/* Navigation */
 nav {
-  background-color: #003366;
+  background-color: var(--secondary-color);
   padding: 10px 0;
   text-align: center;
-  position: fixed; /* Make the navigation fixed */
-  top: 80px; /* Position it below the header */
-  width: 100%; /* Ensure it spans the full width */
-  z-index: 999; /* Ensure it stays above other elements but below the header */
+  position: fixed; 
+  top: 80px; 
+  width: 100%; 
+  z-index: 999; 
 }
 
 nav ul {
@@ -109,7 +126,7 @@ nav ul li {
 }
 
 nav a {
-  color: white;
+  color: var(--text-light);
   text-decoration: none;
   padding: 10px 15px;
   display: block;
@@ -118,20 +135,19 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #0073e6;
+  background-color: var(--accent-color);
 }
 
-/* Dropdown Menu */
 .dropdown-content {
   display: none;
   position: absolute;
-  background: white;
+  background: var(--text-light);
   min-width: 160px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-content a {
-  color: #004080;
+  color: var(--primary-color);
   padding: 10px;
 }
 
@@ -139,7 +155,6 @@ nav a:hover {
   display: block;
 }
 
-/* Mobile Navigation */
 #menu-toggle {
   display: none;
 }
@@ -149,32 +164,39 @@ nav a:hover {
   font-size: 1.8rem;
   cursor: pointer;
   padding: 10px;
-  background-color: #004080;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--text-light);
   text-align: center;
   width: 100%;
 }
 
-/* Show Mobile Menu When Checked */
 #menu-toggle:checked + .menu-icon + ul {
   display: flex;
   flex-direction: column;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .menu-icon {
       display: block;
   }
-  .logo h1{
+  .logo h1 {
       font-size: 1rem;
+  }
+  nav {
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+    text-align: center;
+    position: relative; 
+    top: 80px; 
+    width: 100%; 
+    z-index: 999; 
   }
 
   nav ul {
       display: none;
       flex-direction: column;
       width: 100%;
-      background-color: #003366;
+      background-color: var(--secondary-color);
   }
 
   nav a {
@@ -189,7 +211,6 @@ nav a:hover {
   }
 }
 
-/* Dark Mode Toggle Switch */
 .toggle-switch {
   position: relative;
   display: inline-block;
@@ -198,14 +219,12 @@ nav a:hover {
   margin-left: 10px;
 }
 
-/* Hide Checkbox */
 .toggle-switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* Slider (Switch Button) */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -213,12 +232,11 @@ nav a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--background-light);
   border-radius: 34px;
   transition: 0.4s;
 }
 
-/* Circle inside the slider */
 .slider::before {
   content: "";
   position: absolute;
@@ -226,62 +244,55 @@ nav a:hover {
   width: 18px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var(--text-dark);
   border-radius: 50%;
   transition: 0.4s;
 }
 
-/* Change slider color when checked */
 input:checked + .slider {
-  background-color: #020202;
+  background-color: var(--accent-color);
 }
 
 input:checked + .slider::before {
   transform: translateX(24px);
 }
-/* RESPONSIVE DARK MODE TOGGLE */
+
 @media (max-width: 768px) {
   .toggle-switch {
-      width: 45px;
-      height: 22px;
+    width: 45px;
+    height: 22px;
   }
-  .slider{
-    width: 60%;
-    height: 30%;
-    background-color: #003366;
-  }
+
   .slider::before {
-      height: 16px;
-      width: 16px;
-      left: 3px;
-      bottom: 3px;
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
   }
 
   input:checked + .slider::before {
-      transform: translateX(1px);
+    transform: translateX(1px);
   }
 }
 
-/* Extra Small Screens (Max 480px) */
 @media (max-width: 480px) {
   .toggle-switch {
-      width: 40px;
-      height: 20px;
+    width: 40px;
+    height: 20px;
   }
 
   .slider::before {
-      height: 14px;
-      width: 14px;
-      left: 3px;
-      bottom: 3px;
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
   }
 
   input:checked + .slider::before {
-      transform: translateX(1px);
+    transform: translateX(1px);
   }
 }
 
-/* Specific Fix for 400px Screens */
 @media (max-width: 400px) {
   .toggle-switch {
       width: 38px;
@@ -300,28 +311,26 @@ input:checked + .slider::before {
   }
 }
 
-
-
 .registration-form {
   max-width: 600px;
   margin: 20px auto;
-  background-color: white;
+  background-color: var(--text-light);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ddd;
+  border: 1px solid var(--background-light);
   margin-top: 3cm;
 }
 
 .registration-form h1 {
   text-align: center;
-  color: #004080;
+  color: var(--primary-color);
   margin-bottom: 20px;
   font-size: 1.8rem;
 }
 
 fieldset {
-  border: 1px solid #ccc;
+  border: 1px solid var(--background-light);
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
@@ -329,7 +338,7 @@ fieldset {
 
 fieldset legend {
   font-weight: bold;
-  color: #004080;
+  color: var(--primary-color);
   padding: 0 10px;
 }
 
@@ -354,7 +363,7 @@ select {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-  background-color: #f9f9f9;
+  background-color: var(--background-light);
 }
 
 input[type="text"]:focus,
@@ -364,9 +373,9 @@ input[type="password"]:focus,
 input[type="date"]:focus,
 textarea:focus,
 select:focus {
-  border-color: #0073e6;
+  border-color: var(--accent-color);
   outline: none;
-  background-color: #fff;
+  background-color: var(--text-light);
 }
 
 input[type="radio"],
@@ -384,8 +393,8 @@ input[type="reset"] {
   padding: 12px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #0073e6;
-  color: white;
+  background-color: var(--accent-color);
+  color: var(--text-light);
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -394,7 +403,7 @@ input[type="reset"] {
 
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-  background-color: #005bb5;
+  background-color: var(--primary-color);
 }
 
 .registration-form .form-group {
@@ -422,19 +431,18 @@ main {
   flex-wrap: wrap;
   padding: 20px;
   gap: 20px;
-   /* Adjust based on the combined height of the header and nav */
 }
 
 section {
   flex: 3;
-  background-color: white;
+  background-color: var(--text-light);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
-  color: #004080;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 
@@ -452,7 +460,7 @@ article {
 }
 
 article h4 {
-  color: #0073e6;
+  color: var(--accent-color);
   margin-bottom: 5px;
 }
 
@@ -462,14 +470,14 @@ article p {
 
 aside {
   flex: 1;
-  background-color: #f4f4f4;
+  background-color: var(--background-light);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 aside h3 {
-  color: #004080;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 
@@ -478,40 +486,40 @@ aside marquee {
   color: #333;
 }
 
-/* Announcements Section */
 aside.announcements {
-  flex: 1; /* Allows the announcements section to take up available space */
-  background-color: #f4f4f4; /* Light gray background */
-  padding: 20px; /* Adds spacing inside the section */
-  border-radius: 10px; /* Rounded corners for a modern look */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  flex: 1; 
+  background-color: var(--background-light); 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
-#space{
+
+#space {
   margin-top: 3.5cm;
 }
 
 aside.announcements h3 {
-  color: #004080; /* Theme color for the heading */
-  margin-bottom: 10px; /* Adds spacing below the heading */
-  font-size: 1.2rem; /* Slightly larger font size for emphasis */
-  text-align: center; /* Centers the heading text */
+  color: var(--primary-color); 
+  margin-bottom: 10px; 
+  font-size: 1.2rem; 
+  text-align: center; 
 }
 
 aside.announcements marquee {
-  font-size: 0.9rem; /* Font size for the scrolling text */
-  color: #333; /* Neutral color for readability */
+  font-size: 0.9rem; 
+  color: #333; 
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #004080;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--text-light);
   margin-top: 20px;
 }
 
 footer a {
-  color: #0073e6;
+  color: var(--accent-color);
   text-decoration: none;
   margin: 0 10px;
 }
@@ -529,7 +537,6 @@ footer p {
   margin: 10px 0;
 }
 
-
 table {
   width: 80%;
   border-collapse: collapse;
@@ -540,18 +547,20 @@ table {
 
 table th, table td {
   padding: 12px 15px;
+
+
 table th {
-  background-color: #004080;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--text-light);
   font-weight: bold;
 }
 
 table tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: var(--background-light);
 }
 
 table tr:hover {
-  background-color: #e6f0ff;
+  background-color: var(--accent-color);
 }
 
 ul {
@@ -563,29 +572,31 @@ ul {
 ul li {
   margin-bottom: 10px;
   font-size: 1rem;
-  color: #004080;
+  color: var(--primary-color);
   font-weight: bold;
 }
-#features{
-  text-align: left;
 
+#features {
+  text-align: left;
 }
 
 .canvas-container {
-    border: 2px solid #000;
-    padding: 5px; 
-    display: inline-block; 
-    background-color: #f9f9f9; 
-    margin: 20px 0; 
+  border: 2px solid #000;
+  padding: 5px; 
+  display: inline-block; 
+  background-color: var(--background-light); 
+  margin: 20px 0; 
 }
-#task{
-    width: 10%;
-    padding: 12px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+
+#task {
+  width: 10%;
+  padding: 12px;
+  background-color: var(--background-light);
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
-#apiData{
+
+#apiData {
   text-align: left;
   max-width: 50px;
 }
