@@ -6,22 +6,17 @@
     <title>About us</title>
     <link rel="icon" href="Images/logo.png">
     <link rel="stylesheet" href="style.css">
+
     <style>
-          #about{
-            text-align: left;
-            margin-top: 3cm;
-        }
-        .technologies li{
-         list-style: square;
-         margin-left: 0.5cm;
-        }
-        @media screen and (max-width: 600px) {
-            #about {
-                margin-top: 3.5cm;
-            }
-           
-            
-        }
+      .technologies {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: block;
+        flex-wrap: wrap;
+        gap: 10px;
+        text-align: left;
+      } 
     </style>
 </head>
 <body id="body">
@@ -61,7 +56,7 @@
         </ul>
     </nav>
     <main>
-        <section id="about">
+        <section id="space">
             <h1>ABOUT US</h1>
             <h2>Our Team</h2>
             <table>
@@ -96,22 +91,36 @@
                 <li>Node.js</li>
             </ul>
             <h2>FAQ</h2>
-            <details>
-                <summary>What services do you offer?</summary>
-                <p>We offer a wide range of services including web development, mobile app development, AI and machine learning solutions, and comprehensive training programs.</p>
-            </details>
-            <details>
-                <summary>How can I register for a training program?</summary>
-                <p>You can register for our training programs through the registration page on our website. Simply fill out the form and submit your details.</p>
-            </details>
-            <details>
-                <summary>Where are you located?</summary>
-                <p>We are located at 123 Tech Innovators Street, Innovation City, Techland.</p>
-            </details>
-            <details>
-                <summary>How can I contact you?</summary>
-                <p>You can contact us through the contact page on our website or email us at contact@techinnovators.com.</p>
-            </details>
+            <section class="faq">
+                <details>
+                    <summary>
+                        <span class="faq-title">What services do you offer?</span>
+                        <span class="faq-icon">▶</span>
+                    </summary>
+                    <p>We offer a wide range of services including web development, mobile app development, AI and machine learning solutions, and comprehensive training programs.</p>
+                </details>
+                <details>
+                    <summary>
+                        <span class="faq-title">How can I register for a training program?</span>
+                        <span class="faq-icon">▶</span>
+                    </summary>
+                    <p>You can register for our training programs through the registration page on our website. Simply fill out the form and submit your details.</p>
+                </details>
+                <details>
+                    <summary>
+                        <span class="faq-title">Where are you located?</span>
+                        <span class="faq-icon">▶</span>
+                    </summary>
+                    <p>We are located at 123 Tech Innovators Street, Innovation City, Techland.</p>
+                </details>
+                <details>
+                    <summary>
+                        <span class="faq-title">How can I contact you?</span>
+                        <span class="faq-icon">▶</span>
+                    </summary>
+                    <p>You can contact us through the contact page on our website or email us at contact@techinnovators.com.</p>
+                </details>
+            </section>
         </section>
         <aside class="announcements" id="space">
             <h3>ANNOUNCEMENTS</h3>
@@ -123,6 +132,23 @@
                     <li>Submit your project proposals by March 20th.</li>
                 </ol>
             </marquee>
+                        <!-- Analog and Digital Clocks -->
+<div id="clocks">
+    <div class="analog-clock-container">
+        <div class="analog-clock">
+            <div class="hour-hand"></div>
+            <div class="minute-hand"></div>
+            <div class="second-hand"></div>
+            <div class="center"></div>
+        </div>
+    </div>
+
+    <div class="digital-clock-container">
+        <div id="digital-clock"></div>
+    </div>
+    
+</div>
+
         </aside>
     </main>
     <footer>
@@ -135,5 +161,7 @@
         </div>
         <a href="#body">Back To Top</a>
     </footer>
+    <script src="./js/about.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

@@ -20,12 +20,11 @@
         <label class="toggle-switch" for="modeToggle"> 
             <input type="checkbox" id="modeToggle" title="Toggle Mode">
             <span class="slider"></span>
-          </label>
+        </label>
     </header>
     <nav>
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">☰</label>
-
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="registration.html">Registration</a></li>
@@ -44,17 +43,19 @@
         </ul>
     </nav>
     <main>
-        <section class="registration-form">
+        <section class="registration-form" id="space">
             <div class="content">
                 <h2>LOGIN FORM</h2>
-                <form>
+                <form id="login-form">
                     <label for="email">Email:</label>
                     <input type="email" id="email" placeholder="Enter your email" required>
+                    <span id="email-error" class="error-message" style="display:none;">Email must be @techinnovators.com</span>
                     
                     <label for="password">Password:</label>
-                    <input type="password" id="password" placeholder="Enter password" required>
+                    <input type="password" id="password" placeholder="Enter password" required disabled>
+                    <span id="password-error" class="error-message" style="display:none;">Password must be at least 8 characters long, contain a number, and a special character.</span>
                     
-                    <input type="submit" value="Login">
+                    <input type="submit" value="Login" id="login-btn" disabled>
                 </form>
             </div>
         </section>
@@ -68,6 +69,23 @@
                     <li>Submit your project proposals by March 20th.</li>
                 </ol>
             </marquee>
+                        <!-- Analog and Digital Clocks -->
+<div id="clocks">
+    <div class="analog-clock-container">
+        <div class="analog-clock">
+            <div class="hour-hand"></div>
+            <div class="minute-hand"></div>
+            <div class="second-hand"></div>
+            <div class="center"></div>
+        </div>
+    </div>
+
+    <div class="digital-clock-container">
+        <div id="digital-clock"></div>
+    </div>
+    
+</div>
+
         </aside>
     </main>    
     <footer>
@@ -82,18 +100,8 @@
         </div>
         <a href="#body">Back To Top</a>
     </footer>
-    <script>
-        // Dark Mode Toggle
-        function toggleDarkMode() {
-            const body = document.getElementById('body');
-            if (body.style.backgroundColor === 'black') {
-                body.style.backgroundColor = 'white';
-                body.style.color = 'black';
-            } else {
-                body.style.backgroundColor = 'black';
-                body.style.color = 'white';
-            }
-        }
-    </script>
+    <script src="./js/script.js"></script>
+    <script src="./js/login.js"></script>
+    
 </body>
 </html>

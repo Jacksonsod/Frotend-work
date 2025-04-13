@@ -6,6 +6,7 @@
     <title>REGISTRATION</title>
     <link rel="icon" href="Images/logo.png">
     <link rel="stylesheet" href="style.css">
+    <script src="./js/script.js"></script>
 </head>
 <body id="body">
     <header>
@@ -20,12 +21,11 @@
         <label class="toggle-switch" for="modeToggle"> 
             <input type="checkbox" id="modeToggle" title="Toggle Mode">
             <span class="slider"></span>
-          </label>
+        </label>
     </header>
     <nav>
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">☰</label>
-
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="registration.html">Registration</a></li>
@@ -45,17 +45,17 @@
     </nav>
     <main>
         <section class="registration-form">
-            <h1>Registration Form</h1>
-            <form>
+            <h1 id="space">Registration Form</h1>
+            <form id="registration-form">
                 <fieldset>
                     <legend>Personal Information</legend>
                     <div class="form-group">
                         <label for="name">Full Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name">
                     </div>
                     <div class="form-group">
                         <label for="dob">Date of Birth:</label>
-                        <input type="date" id="dob" name="dob" required>
+                        <input type="date" id="dob" name="dob">
                     </div>
                     <div class="form-group">
                         <label>Gender:</label>
@@ -71,15 +71,22 @@
                     <legend>Contact Information</legend>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                        <span id="email-error" class="error-message" style="display:none;">Email must be @techinnovators.com</span>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password">
+                        <div id="password-strength" class="strength-meter"></div>
+                        <span id="password-error" class="error-message" style="display:none;">Password must be at least 8 characters long, contain a number, and a special character.</span>
                     </div>
                 </fieldset>
                 <div class="form-actions">
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" id="submit-btn">
                     <input type="reset" value="Reset">
                 </div>
             </form>
@@ -95,6 +102,23 @@
                     <li>Submit your project proposals by March 20th.</li>
                 </ol>
             </marquee>
+                        <!-- Analog and Digital Clocks -->
+<div id="clocks">
+    <div class="analog-clock-container">
+        <div class="analog-clock">
+            <div class="hour-hand"></div>
+            <div class="minute-hand"></div>
+            <div class="second-hand"></div>
+            <div class="center"></div>
+        </div>
+    </div>
+
+    <div class="digital-clock-container">
+        <div id="digital-clock"></div>
+    </div>
+    
+</div>
+
         </aside>
     </main>
 
@@ -111,11 +135,7 @@
         <a href="#body">Back To Top</a>
     </footer>
 
-    <script>
-        function toggleDarkMode() {
-            var body = document.getElementById('body');
-            body.classList.toggle('dark-mode');
-        }
-    </script>
+    <script src="./js/script.js"></script>
+    <script src="./js/register.js"></script>
 </body>
 </html>

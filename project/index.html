@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,6 @@
     <link rel="icon" href="Images/logo.png">
     <link rel="icon" href="Images/logo.png">
     <link rel="stylesheet" href="style.css">
-    <style>
-       
-    </style>
 </head>
 <body>
     <header>
@@ -53,7 +51,22 @@
             <p class="text">
                 Tech Innovators Inc. is a leading provider of cutting-edge technology solutions and comprehensive training programs. Our mission is to empower businesses and individuals with the latest advancements in technology, ensuring they stay ahead in a rapidly evolving digital landscape.
             </p>
-            <img src="Images/Tech.jpg" alt="Image 2" width="100%">
+
+            <!-- Carousel Section -->
+            <div class="carousel">
+                <div class="carousel-images">
+                    <div class="carousel-row">
+                        <img src="Images/pc1.jpg" alt="Course 1">
+                        <img src="Images/pc2.jpg" alt="Course 2">
+                    </div>
+                    <div class="carousel-row">
+                        <img src="Images/pc3.jpg" alt="Course 3">
+                        <img src="Images/pc4.jpg" alt="Course 4">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Section -->
             <h3>Blog</h3>
             <article>
                 <h4>Post 1: The Future of AI in Business</h4>
@@ -74,10 +87,28 @@
                     <li>Submit your project proposals by March 20th.</li>
                 </ol>
             </marquee>
+            <!-- Analog and Digital Clocks -->
+<div id="clocks">
+    <div class="analog-clock-container">
+        <div class="analog-clock">
+            <div class="hour-hand"></div>
+            <div class="minute-hand"></div>
+            <div class="second-hand"></div>
+            <div class="center"></div>
+        </div>
+    </div>
+
+    <div class="digital-clock-container">
+        <div id="digital-clock"></div>
+    </div>
+    
+</div>
+
         </aside>
     </main>
+    
     <footer>
-        <p>© 2025 Tech Innovators Inc. Designed by Jackson Bimenyimana</p>
+    <script src="./js/script.js"></script>
         <a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a>
         <div class="social-links">
             <a href="#"><img src="Images/youtube.png" alt="YouTube" width="20"></a>
@@ -88,10 +119,7 @@
         </div>
         <a href="#up">Back To Top</a>
     </footer>
-    <script>
-    document.getElementById('modeToggle').addEventListener('change', function () {
-        document.body.classList.toggle('dark-mode', this.checked);
-      });
-      </script>
+
+    
 </body>
 </html>
